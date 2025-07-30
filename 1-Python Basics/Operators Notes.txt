@@ -1,0 +1,145 @@
+Python provides a rich set of operators to perform various operations on data. Here's a breakdown of common operator types and related concepts, often asked in interviews:
+
+1. Arithmetic Operators:
+Used to perform mathematical calculations.
+
++ (Addition): x + y
+
+- (Subtraction): x - y
+
+* (Multiplication): x * y
+
+/ (Division): x / y (always returns a float)
+
+% (Modulo): x % y (returns the remainder of the division)
+
+** (Exponentiation): x ** y (x raised to the power of y)
+
+// (Floor Division): x // y (returns the integer part of the quotient, rounding down)
+
+2. Comparison (Relational) Operators:
+Used to compare two values and return a boolean result (True or False).
+
+== (Equal to): x == y
+
+!= (Not equal to): x != y
+
+> (Greater than): x > y
+
+< (Less than): x < y
+
+>= (Greater than or equal to): x >= y
+
+<= (Less than or equal to): x <= y
+
+3. Assignment Operators:
+Used to assign values to variables.
+
+= (Assignment): x = 10
+
++= (Add and assign): x += 5 (equivalent to x = x + 5)
+
+-= (Subtract and assign): x -= 5 (equivalent to x = x - 5)
+
+*= (Multiply and assign): x *= 5 (equivalent to x = x * 5)
+
+/= (Divide and assign): x /= 5 (equivalent to x = x / 5)
+
+%= (Modulo and assign): x %= 5 (equivalent to x = x % 5)
+
+**= (Exponentiate and assign): x **= 2 (equivalent to x = x ** 2)
+
+//= (Floor divide and assign): x //= 2 (equivalent to x = x // 2)
+
+&= (Bitwise AND and assign)
+
+|= (Bitwise OR and assign)
+
+^= (Bitwise XOR and assign)
+
+>>= (Bitwise right shift and assign)
+
+<<= (Bitwise left shift and assign)
+
+4. Logical Operators:
+Used to combine conditional statements.
+
+and: Returns True if both statements are true.
+
+x > 5 and y < 10
+
+or: Returns True if at least one of the statements is true.
+
+x > 5 or y < 10
+
+not: Reverses the result, returns False if the result is true.
+
+not(x > 5 and y < 10)
+
+5. Identity Operators:
+Used to compare the memory locations of two objects.
+
+is: Returns True if both variables point to the same object in memory.
+
+x is y
+
+is not: Returns True if both variables do not point to the same object in memory.
+
+x is not y
+
+Important Note on == vs. is:
+
+== compares the values of the objects.
+
+is compares the identity (memory address) of the objects.
+
+Python
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+
+print(list1 == list2)  # True (values are the same)
+print(list1 is list2)  # False (different objects in memory)
+print(list1 is list3)  # True (both point to the same object)
+6. Membership Operators:
+Used to test if a sequence (string, list, tuple, set, dictionary) contains a specified value.
+
+in: Returns True if a value is found in the sequence.
+
+'a' in 'apple'
+
+3 in [1, 2, 3]
+
+not in: Returns True if a value is not found in the sequence.
+
+'z' not in 'apple'
+
+7. Bitwise Operators:
+Used to perform operations on individual bits of integers. These are less common in general programming but important in specific domains like low-level programming, encryption, or when optimizing for bit manipulation.
+
+& (AND): Sets each bit to 1 if both bits are 1.
+
+| (OR): Sets each bit to 1 if at least one of the bits is 1.
+
+^ (XOR): Sets each bit to 1 if only one of the bits is 1.
+
+~ (NOT): Inverts all the bits.
+
+<< (Left Shift): Shifts bits to the left, filling with zeros on the right. Equivalent to multiplying by 2 
+n
+ .
+
+>> (Right Shift): Shifts bits to the right, filling with zeros on the left (for positive numbers). Equivalent to integer division by 2 
+n
+ .
+
+8. Operator Precedence and Associativity:
+
+Precedence: Determines the order in which operators are evaluated in an expression (e.g., multiplication and division have higher precedence than addition and subtraction). Parentheses () can be used to override precedence.
+
+Associativity: Determines the order of evaluation when operators have the same precedence (e.g., most operators are left-associative).
+
+Example: 2 + 3 * 4 will evaluate 3 * 4 first (12), then 2 + 12 (14).
+
+Example: 10 / 2 * 5 will evaluate 10 / 2 first (5), then 5 * 5 (25) because / and * have the same precedence and are left-associative.
